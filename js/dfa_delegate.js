@@ -11,7 +11,9 @@ var dfa_delegate = (function() {
     var status = dfa.status();
     
     $('.current').removeClass('current');
-    if (statusConnector) {statusConnector.setPaintStyle(jsPlumb.Defaults.PaintStyle);}
+    if (statusConnector) {
+      statusConnector.setPaintStyle(jsPlumb.Defaults.PaintStyle);
+    }
     
     var curState = $('#' + status.state).addClass('current');
     jsPlumb.select({source:status.state}).each(function(connection) {
